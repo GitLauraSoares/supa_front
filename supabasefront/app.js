@@ -1,4 +1,4 @@
-const productList = document.querySelector('#Protudos');
+const productList = document.querySelector('#Produtos');
 
 // ADD form
 const addProductForm = document.querySelector('#add-product-form');
@@ -154,4 +154,5 @@ searchForm.addEventListener('submit', async (event) => {
 
 // LOAD PRODUCTS AT START
 fetchProducts();
+
 
