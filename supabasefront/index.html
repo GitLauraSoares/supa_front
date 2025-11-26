@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product CRUD</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <h1>Gerenciador de Produtos</h1>
+
+  <!-- CONTAINER PRINCIPAL -->
+  <div class="container">
+
+    <!-- FORM DE ADIÇÃO -->
+    <form id="add-product-form" class="card">
+      <h2>Cadastrar Produto</h2>
+
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="price">Preço:</label>
+      <input type="number" id="price" name="price" required step="0.01">
+
+      <label for="add-description">Descrição:</label>
+      <input type="text" id="add-description" name="description" placeholder="Ex: Produto resistente, cor azul">
+
+      <button type="submit" class="btn-primary">Adicionar</button>
+    </form>
+
+
+    <!-- FORM DE UPDATE -->
+    <form id="update-product-form" class="card">
+      <h2>Atualizar Produto</h2>
+
+      <label for="update-id">ID:</label>
+      <input type="number" id="update-id" readonly>
+
+      <label for="update-name">Nome:</label>
+      <input type="text" id="update-name">
+
+      <label for="update-price">Preço:</label>
+      <input type="number" id="update-price" step="0.01">
+
+      <label for="update-description">Descrição:</label>
+      <input type="text" id="update-description">
+
+      <button type="submit" class="btn-primary">Atualizar</button>
+    </form>
+
+
+    <!-- CONSULTA POR ID -->
+    <form id="search-form" class="card">
+      <h2>Buscar Produto por ID</h2>
+
+      <label for="search-id">ID:</label>
+      <input type="number" id="search-id">
+
+      <button type="submit" class="btn-primary">Buscar</button>
+
+      <div id="search-result"></div>
+    </form>
+  </div>
+
+
+  <!-- LISTAGEM -->
+  <h2 style="text-align:center; margin-top: 30px;">Produtos Cadastrados</h2>
+  <ul id="products"></ul>
+
+
+  <script src="app.js"></script>
+</body>
+</html>
